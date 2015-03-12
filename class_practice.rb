@@ -1,9 +1,27 @@
 ##Create an Empty class named 'Person'
 
+class Person 
+
+  def name
+    @name
+  end
 
 
+  def age
+    @age
+  end
 
+  def birthdate
+    @birthdate
+  end
 
+  # def initialize(name, age, birthdate)
+  #   @name = name
+  #   @age = age 
+  #   @birthdate = birthdate
+  # end
+
+end
 
 
 
@@ -26,11 +44,7 @@
 
 
 
-
-
-
 ##Define 'methods' that allow you to access and set all three of those properties, Do not use attribute accessor
-=begin
 
 
 
@@ -41,7 +55,8 @@
 
 
 
-=end
+
+
 
 
 
@@ -49,7 +64,7 @@
 =begin
 
 
-
+It creates an empty Person that we can assign name, age and birthdate to
 
 
 
@@ -61,10 +76,16 @@
 
 
 ##Create an initializer method that allows you do Person.new 'Amy Smith' , which initializes the  Person's name property
+class Person
 
+  def intialize name
+    @name = name
+  end
 
+end
 
-
+person1 = Person.new("Amy Smith")
+puts person1.name
 
 
 
@@ -74,8 +95,15 @@
 
 ##Write a method that outputs the value of the self keyword to the console
 
+class Person
+
+  def self.print_value
+    puts "hey yo this is self"
+  end
+end
 
 
+Person.print_value
 
 
 
@@ -87,7 +115,7 @@
 ##Explain in as much detail as possible what self refers to and what it means in the grand scheme of things
 =begin
 
-
+Self gives us access to the current object or class which is receiving the method.
 
 
 
@@ -105,7 +133,7 @@
 
 
 
-
+Object instantiation is creating a new instance of that object from a class, using anObject = myClass.new
 
 
 
@@ -139,7 +167,8 @@ end
 
 =begin
 
-
+Instance variable is amy and local variable is Bob.  Instance variable are available within a class.  Local variables are 
+are available only within the method where it is defined.
 
 =end
 
@@ -151,7 +180,7 @@ end
 
 
 
-
+Similar to functions, ruby methods are contain one or more repeatable statements contained within a unit
 
 
 
@@ -177,7 +206,7 @@ end
 =begin
 
 
-
+A class method is called on class while instance methods are called on an instance of that class.
 
 
 
